@@ -1,0 +1,5 @@
+tasks:
+  - name: Set theme
+    dconf:
+      key: /org/gnome/desktop/interface/
+      value: "prefer-light"
