@@ -1,0 +1,30 @@
+---
+- name: APT
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Remove useless packages from the cache
+      ansible.builtin.apt:
+        autoclean: true
+        autoremove: true
+
+    - name: Install developments tools
+      ansible.builtin.apt:
+        pkg:
+          - mat2
+          - unzip
+          # - starship
+          - exa
+          - bat
+          - fortune
+          # - pfetch
+          - htop
+          - gnome-boxes
+
+    - name: Removed development tools
+      ansible.builtin.apt:
+        pkg:
+          - crystal
+          - elixir
+        state: absent

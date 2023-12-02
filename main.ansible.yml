@@ -3,32 +3,8 @@
   hosts: localhost
   become: true
 
-  tasks:
+- name: Flatpak
+  import_playbook: playbooks/flatpak.ansible.yml
 
-    - name: FLATPAK
-      include_tasks: tasks/flatpak.yml
-
-    - name: Remove useless packages from the cache
-      apt:
-        autoclean: yes
-        autoremove: yes
-
-    - name: Install developments tools
-      apt:
-        pkg:
-          - mat2
-          - unzip
-          #- starship
-          - exa
-          - bat
-          - fortune
-          #- pfetch
-          - htop
-          - gnome-boxes
-    
-    - name: Removed development tools
-      apt:
-        pkg: 
-          - crystal
-          - elixir
-        state: absent
+- name: APT
+  import_playbook: playbooks/apt.ansible.yml

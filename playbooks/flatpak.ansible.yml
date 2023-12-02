@@ -1,0 +1,85 @@
+---
+- name: FLATPAK
+  hosts: localhost
+  tasks:
+    - name: Install multiple packages
+      community.general.flatpak:
+        name:
+          - com.belmoussaoui.Obfuscate
+          - com.github.johnfactotum.Foliate
+          - com.google.AndroidStudio
+          - com.rafaelmardojai.Blanket
+          - com.redis.RedisInsight
+          - com.valvesoftware.Steam
+          - fr.romainvigier.MetadataCleaner
+          - io.github.slgobinath.SafeEyes
+          - org.tigervnc.vncviewer
+          - rest.insomnia.Insomnia
+        method: user
+
+    - name: Remove multiple packages
+      community.general.flatpak:
+        name:
+          - app.drey.Dialect
+          - com.belmoussaoui.Decoder
+          - com.discordapp.Discord
+          - com.felipekinoshita.Wildcard
+          - com.github.buddhi1980.mandelbulber2
+          - com.github.carlos157oliveira.Calculus
+          - com.github.reds.LogisimEvolution
+          - com.github.skylot.jadx
+          - com.github.tenderowl.frog
+          - com.jetbrains.DataGrip
+          - com.jetpackduba.Gitnuro
+          - com.kavilgroup.gelectrical
+          - com.ktechpit.torrhunt
+          - com.mattjakeman.ExtensionManager
+          - com.mongodb.Compass
+          - com.play0ad.zeroad
+          - com.rafaelmardojai.SharePreview
+          - com.rtosta.zapzap
+          - com.slack.Slack
+          - com.sweethome3d.Sweethome3d
+          - com.vixalien.decibels
+          - com.xnview.XnSketch
+          - de.haeckerfelix.Fragments
+          - dev.Cogitri.Health
+          - dev.geopjr.Collision
+          - io.bassi.Amberol
+          - io.gdevelop.ide
+          - io.github.Foldex.AdwSteamGtk
+          - io.github.hmlendea.geforcenow-electron
+          - io.github.realmazharhussain.GdmSettings
+          - me.iepure.devtoolbox
+          - net.sapples.LiveCaptions
+          - org.audacityteam.Audacity
+          - org.duckstation.DuckStation
+          - org.freecadweb.FreeCAD
+          - org.fritzing.Fritzing
+          - org.gaphor.Gaphor
+          - org.ghidra_sre.Ghidra
+          - org.gimp.GIMP
+          - org.gnome.Boxes
+          - org.gnome.Cheese
+          - org.gnome.Evince
+          - org.gnome.GHex
+          - org.gnome.Mines
+          - org.gnome.Recipes
+          - org.gnome.gitlab.YaLTeR.VideoTrimmer
+          - org.inkscape.Inkscape
+          - org.kde.kdenlive
+          - org.nickvision.money
+          - org.nickvision.tubeconverter
+          - org.nmap.Zenmap
+          - org.openmw.OpenMW
+          - org.openscad.OpenSCAD
+          - org.pitivi.Pitivi
+          - org.soapui.SoapUI
+          - org.stellarium.Stellarium
+          - org.wireshark.Wireshark
+          - org.zaproxy.ZAP
+          - page.codeberg.Imaginer.Imaginer
+          - se.sjoerd.Graphs
+          - com.github.geigi.cozy
+        state: absent
+        method: user
