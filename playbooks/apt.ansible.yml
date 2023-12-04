@@ -9,7 +9,7 @@
         autoclean: true
         autoremove: true
 
-    - name: Install developments tools
+    - name: Install development packages
       ansible.builtin.apt:
         pkg:
           - mat2
@@ -21,10 +21,18 @@
           # - pfetch
           - htop
           - gnome-boxes
+          - nmap
+          # - boosteroid
+          - chat-gpt
+          - cloc
+          - code
 
-    - name: Removed development tools
+    - name: Remove development tools
       ansible.builtin.apt:
         pkg:
           - crystal
           - elixir
+          - cmake
+          - julia
+          - wrk
         state: absent
