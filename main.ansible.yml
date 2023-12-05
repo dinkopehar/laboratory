@@ -8,3 +8,9 @@
 
 - name: APT
   import_playbook: playbooks/apt.ansible.yml
+
+# - name: GNOME
+#   import_playbook: playbooks/gnome.ansible.yml
+
+- name: Clone some interesting projects to work with
+  import_playbook: playbooks/projects.ansible.yml

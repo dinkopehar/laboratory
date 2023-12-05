@@ -1,0 +1,16 @@
+---
+- name: Projects
+  hosts: localhost
+
+  tasks:
+    - name: Clone interesting packages
+      ansible.builtin.git:
+        repo: "{{ item.value }}"
+        dest: /home/raziel/Projects/{{ item.key }}
+        single_branch: true
+      loop: "{{ repos | dict2items }}"
+      vars:
+        repos:
+          janephp: https://github.com/janephp/janephp
+          bjoern: https://github.com/jonashaag/bjoern
+          scanapi: https://github.com/scanapi/scanapi
