@@ -8,12 +8,15 @@
           - com.belmoussaoui.Obfuscate
           - com.github.johnfactotum.Foliate
           - com.google.AndroidStudio
+          - com.icons8.Lunacy
           - com.rafaelmardojai.Blanket
           - com.redis.RedisInsight
           - com.valvesoftware.Steam
           - fr.romainvigier.MetadataCleaner
           - io.github.slgobinath.SafeEyes
+          - md.obsidian.Obsidian
           - org.tigervnc.vncviewer
+          - org.videolan.VLC
           - rest.insomnia.Insomnia
         method: user
 
